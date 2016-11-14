@@ -1,0 +1,75 @@
+//
+//  PrefixHeader.pch
+//  XYHereAndNow
+//
+//  Created by iamnowhere on 16/3/18.
+//  Copyright © 2016年 iamnowhere. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "SVProgressHUD.h"
+#import "UIImageView+WebCache.h"
+
+#define JRColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define kNotificationCenter [NSNotificationCenter defaultCenter]
+
+// 重写热点响应区
+#import "XYButton.h"
+
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "FMDB.h"
+
+#import "YMHDefine.h"
+#import "YMHApiManager.h"
+#import "YMHURLDefine.h"
+
+
+#import "UserDefaultsHelper.h"
+#import "CommonHelper.h"
+
+
+#import "UIColor+Additions.h"
+#import "NSString+XYExtension.h"
+#import "UIView+XYAdd.h"
+#import "NSDate+XYEXtension.h"
+#import "UIView+Frame.h"
+#import "NSObject+JudgeNull.h"
+
+#import "LocalData.h"
+// 偏好设置
+
+/********打印日志********/
+#ifdef DEBUG
+
+#define ZFLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define ZFLog(...)
+
+#endif
+/********打印日志********/
+
+
+// 取view的坐标及长宽
+#define W(view)    view.frame.size.width
+#define H(view)    view.frame.size.height
+#define X(view)    view.frame.origin.x
+#define Y(view)    view.frame.origin.y
+
+
+#endif
+
+#endif /* PrefixHeader_pch */

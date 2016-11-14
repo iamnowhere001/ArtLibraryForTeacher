@@ -1,0 +1,107 @@
+//
+//  ClassHeaderView.m
+//  ArtLibraryForTeacher
+//
+//  Created by ITUser on 16/8/18.
+//  Copyright © 2016年 iamnowhere. All rights reserved.
+//
+
+#import "ClassHeaderView.h"
+#import "ClassModel.h"
+
+@interface ClassHeaderView ()
+@property (nonatomic, strong) UIImageView *arrowImageView;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *detailLabel;
+
+@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UIView *line;
+@end
+
+@implementation ClassHeaderView
+
+- (instancetype)initWithFrame:(CGRect)frame{
+
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = JRColor(223, 223, 226);
+        
+        self.arrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"expanded"]];
+        [self addSubview:self.arrowImageView];
+        
+        self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.button addTarget:self action:@selector(onExpand:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.button];
+        
+        self.titleLabel = [[UILabel alloc]init];
+        self.titleLabel.textColor = [UIColor blackColor];
+        self.titleLabel.backgroundColor = [UIColor clearColor];
+        self.titleLabel.font = [UIFont systemFontOfSize:14];
+        [self addSubview:self.titleLabel];
+        
+        self.detailLabel = [[UILabel alloc]init];
+        self.detailLabel.textColor = JRColor(100, 100, 100);
+        self.detailLabel.backgroundColor = [UIColor clearColor];
+        self.detailLabel.font = [UIFont systemFontOfSize:12];
+        self.detailLabel.textAlignment = NSTextAlignmentRight;
+        [self addSubview:self.detailLabel];
+        
+        self.line = [[UIView alloc]init];
+        self.line.backgroundColor = SeparatorLineColor;// [UIColor lightGrayColor];
+        [self addSubview:self.line];
+    }
+    return self;
+}
+
+- (void)setModel:(ClassModel *)model {
+    if (_model != model) {
+        _model = model;
+    }
+    
+    if (model.isExpanded) {
+        self.arrowImageView.transform = CGAffineTransformIdentity;
+    } else {
+        self.arrowImageView.transform = CGAffineTransformMakeRotation(M_PI);
+    }
+    
+    self.titleLabel.text = model.className;
+    self.detailLabel.text = [NSString stringWithFormat:@"学生数(%ld)    作品数(%ld)",(long)model.studentCount,(long)model.opusCount];
+    
+    NSDictionary *dic = @{NSForegroundColorAttributeName:[UIColor redColor]};
+    NSMutableAttributedString *attributeStr = [[NSMutableAttributedString alloc]initWithString:self.detailLabel.text];
+    [attributeStr addAttributes:dic range:[self.detailLabel.text rangeOfString:[NSString stringWithFormat:@"%ld",model.studentCount]]];
+    NSRange range = [self.detailLabel.text rangeOfString:[NSString stringWithFormat:@"作品数(%ld",model.opusCount]];
+    [attributeStr addAttributes:dic range:NSMakeRange(range.location + 4, range.length - 4)];
+    self.detailLabel.attributedText = attributeStr;
+}
+
+- (void)onExpand:(UIButton *)sender {
+    self.model.isExpanded = !self.model.isExpanded;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        if (self.model.isExpanded) {
+            self.arrowImageView.transform = CGAffineTransformIdentity;
+        } else {
+            self.arrowImageView.transform = CGAffineTransformMakeRotation(M_PI);
+        }
+    }];
+    
+    if (self.expandCallback) {
+        self.expandCallback(self.model.isExpanded);
+    }
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGFloat w = self.bounds.size.width;
+    CGFloat h = self.bounds.size.height;
+    
+    self.arrowImageView.frame = CGRectMake(w - 25, (h - 8) / 2, 12, 7);
+    self.button.frame = CGRectMake(0, 0, w, h);
+    self.line.frame = CGRectMake(0, h - 0.5, w, 0.5);
+    self.titleLabel.frame = CGRectMake(15, 0, 140, h);
+    self.detailLabel.frame = CGRectMake(120, 0, MAIN_SCREEN_WIDTH - 180, h);
+}
+
+@end
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StudentsCell">
+            <rect key="frame" x="0.0" y="0.0" width="81" height="97"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="81" height="97"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-default" translatesAutoresizingMaskIntoConstraints="NO" id="7nq-Hl-WHn">
+                        <rect key="frame" x="20" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="7kb-px-HAU"/>
+                            <constraint firstAttribute="height" constant="40" id="y5S-JX-aBE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stuName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvS-OZ-6iR">
+                        <rect key="frame" x="5" y="55" width="71" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="dSa-8Z-JkS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="works" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9o-nr-GHf">
+                        <rect key="frame" x="5" y="70" width="71" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="FHz-kC-eha"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="q9o-nr-GHf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Ewt-Uc-XPT"/>
+                <constraint firstItem="q9o-nr-GHf" firstAttribute="top" secondItem="qvS-OZ-6iR" secondAttribute="bottom" id="IEq-sg-sEa"/>
+                <constraint firstItem="qvS-OZ-6iR" firstAttribute="top" secondItem="7nq-Hl-WHn" secondAttribute="bottom" constant="5" id="NQa-Oc-Fyj"/>
+                <constraint firstAttribute="trailing" secondItem="qvS-OZ-6iR" secondAttribute="trailing" constant="5" id="PRv-zq-1BS"/>
+                <constraint firstItem="7nq-Hl-WHn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="RUh-V4-kTU"/>
+                <constraint firstItem="qvS-OZ-6iR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Tb0-sE-cwB"/>
+                <constraint firstItem="7nq-Hl-WHn" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="awC-JJ-T5P"/>
+                <constraint firstAttribute="trailing" secondItem="q9o-nr-GHf" secondAttribute="trailing" constant="5" id="r22-Dd-TNT"/>
+                <constraint firstItem="7nq-Hl-WHn" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="rPn-NL-f6S"/>
+            </constraints>
+            <size key="customSize" width="81" height="97"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="rPn-NL-f6S"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="headImageView" destination="7nq-Hl-WHn" id="IDY-Ds-Ycm"/>
+                <outlet property="studentNameLab" destination="qvS-OZ-6iR" id="ltf-dR-fYD"/>
+                <outlet property="studentOpusCountLab" destination="q9o-nr-GHf" id="r8z-wJ-sM5"/>
+            </connections>
+            <point key="canvasLocation" x="568.5" y="238.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon-default" width="100" height="100"/>
+    </resources>
+</document>

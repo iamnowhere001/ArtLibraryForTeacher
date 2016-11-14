@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputTextViewController">
+            <connections>
+                <outlet property="label" destination="QDC-6N-lO6" id="cyP-km-3AI"/>
+                <outlet property="textView" destination="1gI-5x-zW3" id="s88-Ma-fxf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffZ-Fi-xWh">
+                    <rect key="frame" x="0.0" y="25" width="375" height="120"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-5x-zW3">
+                            <rect key="frame" x="20" y="0.0" width="335" height="120"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1gI-5x-zW3" firstAttribute="leading" secondItem="ffZ-Fi-xWh" secondAttribute="leading" constant="20" id="AHB-zh-FBZ"/>
+                        <constraint firstAttribute="height" constant="120" id="Ch4-9b-GeQ"/>
+                        <constraint firstAttribute="bottom" secondItem="1gI-5x-zW3" secondAttribute="bottom" id="J21-qp-vnl"/>
+                        <constraint firstItem="1gI-5x-zW3" firstAttribute="top" secondItem="ffZ-Fi-xWh" secondAttribute="top" id="JE6-Mb-zqr"/>
+                        <constraint firstAttribute="trailing" secondItem="1gI-5x-zW3" secondAttribute="trailing" constant="20" id="lgC-pH-6h2"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/150" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDC-6N-lO6">
+                    <rect key="frame" x="318" y="153" width="37" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ffZ-Fi-xWh" secondAttribute="trailing" id="0Mo-PT-0kx"/>
+                <constraint firstItem="QDC-6N-lO6" firstAttribute="top" secondItem="ffZ-Fi-xWh" secondAttribute="bottom" constant="8" id="WtM-fg-6IN"/>
+                <constraint firstAttribute="trailing" secondItem="QDC-6N-lO6" secondAttribute="trailing" constant="20" id="hdZ-Ym-q3L"/>
+                <constraint firstItem="ffZ-Fi-xWh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="n0r-6a-JUx"/>
+                <constraint firstItem="ffZ-Fi-xWh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oJY-DG-oAS"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="534.5" y="111.5"/>
+        </view>
+    </objects>
+</document>

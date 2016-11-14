@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView
+END
+XYActionSheet.m
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/XYActionSheet.m
+END
+XYDatePickerView.m
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/XYDatePickerView.m
+END
+XYRefreshHeader.m
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/XYRefreshHeader.m
+END
+UICollectionViewLeftAlignedLayout.h
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/UICollectionViewLeftAlignedLayout.h
+END
+UIView+RXProgressCover.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/UIView+RXProgressCover.h
+END
+ZFAvatarBrowser.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/ZFAvatarBrowser.h
+END
+UICollectionViewLeftAlignedLayout.m
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/UICollectionViewLeftAlignedLayout.m
+END
+UIView+RXProgressCover.m
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/UIView+RXProgressCover.m
+END
+XYActionSheet.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/XYActionSheet.h
+END
+XYDatePickerView.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/XYDatePickerView.h
+END
+ZFAvatarBrowser.m
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/ZFAvatarBrowser.m
+END
+XYRefreshHeader.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ArtLibrary_IOS/!svn/ver/80/ArtLibraryForTeacher/ArtLibraryForTeacher/Classes/Common/BaseView/XYRefreshHeader.h
+END
